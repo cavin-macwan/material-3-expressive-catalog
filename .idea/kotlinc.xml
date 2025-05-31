@@ -6,8 +6,4 @@
   <component name="Kotlin2JvmCompilerArguments">
     <option name="jvmTarget" value="1.8" />
   </component>
-  <component name="KotlinCommonCompilerArguments">
-    <option name="apiVersion" value="2.1" />
-    <option name="languageVersion" value="2.1" />
-  </component>
 </project>

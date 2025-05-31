@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         google {
@@ -9,6 +11,9 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://androidx.dev/snapshots/builds/13580396/artifacts/repository")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -16,8 +21,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://androidx.dev/snapshots/builds/13580396/artifacts/repository")
+        }
     }
 }
 
-rootProject.name = "Call Budy"
+rootProject.name = "Jetpack Boilerplate"
 include(":app")

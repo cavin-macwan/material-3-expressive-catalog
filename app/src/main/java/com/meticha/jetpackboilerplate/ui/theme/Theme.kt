@@ -1,6 +1,5 @@
-package com.meticha.callbudy.ui.theme
+package com.meticha.jetpackboilerplate.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

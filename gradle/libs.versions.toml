@@ -1,6 +1,6 @@
 [versions]
 agp = "8.12.0-alpha03"
-kotlin = "2.1.21"
+kotlin = "2.1.20"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -9,11 +9,12 @@ lifecycleRuntimeKtx = "2.9.0"
 activityCompose = "1.10.1"
 composeBom = "2025.05.01"
 hilt = "2.56.2"
+hiltNavigation = "1.2.0"
 ksp = "2.1.20-2.0.1"
 
 # navigation libraries
 nav3Material = "1.0.0-SNAPSHOT"
-lifecycleViewmodel = "1.0.0-SNAPSHOT"
+lifecycleViewmodel = "1.0.0-alpha01"
 navigation3 = "1.0.0-alpha02"
 kotlinSerialization = "2.1.21"
 kotlinxSerializationCore = "1.8.1"
@@ -37,6 +38,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigation" }
 
 # Core Navigation 3 libraries
 androidx-material3-navigation3 = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "nav3Material" }
@@ -55,7 +57,7 @@ androidx-lifecycle-viewmodel-navigation3-android = { group = "androidx.lifecycle
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization"}
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 

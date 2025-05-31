@@ -1,4 +1,4 @@
-package com.meticha.callbudy.ui.theme
+package com.meticha.jetpackboilerplate.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

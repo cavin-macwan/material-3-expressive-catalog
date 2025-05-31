@@ -8,12 +8,12 @@ plugins {
 }
 
 android {
-    namespace = "com.meticha.callbudy"
+    namespace = "com.meticha.jetpackboilerplate"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.meticha.callbudy"
-        minSdk = 30
+        applicationId = "com.meticha.jetpackboilerplate"
+        minSdk = 31
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -56,6 +56,7 @@ dependencies {
 
     // Hilt dependencies
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
     implementation(libs.androidx.lifecycle.viewmodel.navigation3.android)
     ksp(libs.hilt.compiler)
 
@@ -67,7 +68,6 @@ dependencies {
 
     implementation(libs.kotlinx.serialization.core)
     implementation(libs.kotlinx.serialization.json)
-
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
