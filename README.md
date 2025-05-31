@@ -1,6 +1,6 @@
 # Jetpack Boilerplate
 
-A minimal boilerplate project designed to kickstart new Android application development. This boilerplate is pre-configured with a modern tech stack, including Hilt for dependency injection, Jetpack Navigation Compose, and an **alpha version of Jetpack Compose to explore the latest Material 3 expressive features**.
+A minimal boilerplate project designed to kickstart new Android application development. This boilerplate is pre-configured with a modern tech stack, including Hilt for dependency injection, Jetpack Navigation 3, and an **alpha version of Compose BOM to explore the latest Material 3 expressive features**.
 
 ## 🌟 Features
 
