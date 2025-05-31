@@ -1,18 +1,20 @@
 # Jetpack Boilerplate
 
-A boilerplate project for modern Android application development using Jetpack libraries.
+A minimal boilerplate project designed to kickstart new Android application development. This boilerplate is pre-configured with a modern tech stack, including Hilt for dependency injection, Jetpack Navigation Compose, and an **alpha version of Jetpack Compose to explore the latest Material 3 expressive features**.
 
 ## 🌟 Features
 
+*   **Minimal Setup:** Intentionally lean to provide a clean slate for your project.
 *   **Jetpack Compose:** Built with a modern declarative UI toolkit.
-*   **Hilt:** For dependency injection.
-*   **Navigation 3:** For navigating between composable screens.
-*   **MVVM Architecture** 
+*   **Material 3 Expressive (via Alpha Version):** Experiment with the latest Material Design 3 expressive features using an alpha version of Compose BOM.
+*   **Hilt:** For robust dependency injection.
+*   **Navigation 3:** For navigating between composable screens (leveraging the latest navigation patterns).
+*   **MVVM Architecture:** A foundational MVVM pattern to get you started.
 
 ## 🛠️ Tech Stack & Libraries
 
 *   [Kotlin](https://kotlinlang.org/)
-*   [Jetpack Compose](https://developer.android.com/jetpack/compose)
+*   [Jetpack Compose (Alpha version for Material 3 expressive features)](https://developer.android.com/jetpack/compose)
 *   [Hilt (for Dependency Injection)](https://developer.android.com/training/dependency-injection/hilt-android)
 *   [Navigation Compose](https://developer.android.com/guide/navigation/navigation-3)
 *   [AndroidX Libraries](https://developer.android.com/jetpack/androidx)
@@ -21,8 +23,7 @@ A boilerplate project for modern Android application development using Jetpack l
 
 ### Prerequisites
 
-*   Android Studio (latest canary version recommended)
-*   Kotlin (configured with Android Studio)
+*   Android Studio (latest stable version, or **consider using the latest Canary version of Android Studio for the best compatibility with alpha versions of Jetpack Compose**).
 
 ### Installation
 
@@ -36,6 +37,7 @@ A boilerplate project for modern Android application development using Jetpack l
 
 ## 🏗️ Project Structure
 
+(Adjust this section if your actual structure differs significantly)
 ```
 Jetpack Boilerplate/
 ├── app/
@@ -44,10 +46,10 @@ Jetpack Boilerplate/
 │   │   │   ├── java/com/meticha/jetpackboilerplate/  # Main application code
 │   │   │   │   ├── di/                               # Hilt dependency injection modules
 │   │   │   │   ├── navigation/                       # Navigation graph and setup
-│   │   │   │   ├── ui/                               # UI components (themes)
-│   │   │   │   ├── feature/                          # Screens, ViewModels
+│   │   │   │   ├── ui/                               # UI components (themes, composables)
+│   │   │   │   ├── feature/                          # Screens, ViewModels for specific features
 │   │   │   │   └── MyApplication.kt                  # Application class
-│   │   │   └── res/                                  # Resources (layouts, drawables, strings)
+│   │   │   └── res/                                  # Resources (drawables, strings)
 │   │   └── AndroidManifest.xml
 │   └── build.gradle.kts                            # App-level Gradle file
 ├── gradle/
@@ -55,14 +57,17 @@ Jetpack Boilerplate/
 └── build.gradle.kts                                # Project-level Gradle file
 ```
 
-
 ## 🧑‍💻 Usage
 
-This project serves as a starting point for building Android applications with a modern tech stack.
+This project serves as a starting point. Key benefits include:
+*   **Rapid Prototyping:** Quickly test out new ideas with a modern Android setup.
+*   **Learning Resource:** Explore how Hilt, Navigation Compose, and Material 3 expressive features work together.
+*   **Foundation for New Apps:** Build upon this boilerplate by adding your unique features and business logic.
+
 You can extend it by:
 *   Adding new screens (Composables).
 *   Implementing new features and business logic.
-*   Integrating more Jetpack libraries or third-party dependencies as needed.
+*   Updating dependencies in `gradle/libs.versions.toml` as new stable versions are released.
 
 ## 🤝 Contributing
 
@@ -76,6 +81,6 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 
 ## 📝 License
 
-This project is licensed under the [MIT License](LICENSE.md) - see the LICENSE.md file for details
+This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ---
