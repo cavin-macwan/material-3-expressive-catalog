@@ -67,6 +67,16 @@ spotless {
         target("**/*.kt")
         targetExclude("**/build/**/*.kt")
         licenseHeaderFile(rootProject.file("$rootDir/spotless/copyright.kt"))
+
+        ktlint("1.6.0")
+            .customRuleSets(
+                listOf(
+                    "io.nlopez.compose.rules:ktlint:0.4.16"
+                )
+            )
+            .editorConfigOverride(mapOf("disabled_rules" to "compose:modifier-missing-check"))
+        trimTrailingWhitespace()
+        endWithNewline()
     }
     format("kts") {
         target("**/*.kts")

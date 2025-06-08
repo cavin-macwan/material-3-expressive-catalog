@@ -1,0 +1,8 @@
+root = true
+
+[*]
+indent_size = 4
+max_line_length = 100
+compose_check_modifiers_for_visibility = only_public
+ktlint_function_naming_ignore_when_annotated_with = Composable
+ktlint_compose_modifier-missing-check = disabled
