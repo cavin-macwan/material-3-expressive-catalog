@@ -4,15 +4,11 @@ import androidx.navigation3.runtime.EntryProviderBuilder
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entry
-import com.cavin.material3expressivecatalog.components.buttongroup.ButtonGroupComposable
-import com.cavin.material3expressivecatalog.components.buttongroup.ConnectedButtonGroupComposable
-import com.cavin.material3expressivecatalog.navigation.ButtonGroupRoutes
 import com.cavin.material3expressivecatalog.navigation.ProgressIndicatorRoutes
-import com.cavin.material3expressivecatalog.ui.screens.ContentScreen
 
 fun EntryProviderBuilder<NavKey>.progressIndicatorNavGraph(backStack: NavBackStack) {
 
-    entry<ProgressIndicatorRoutes.ProgressIndicatorListingRoute> {
+    entry<ProgressIndicatorRoutes.ListingRoute> {
         ProgressIndicatorListingScreen(
             onNavigateToExample = { route ->
                 backStack.add(route)

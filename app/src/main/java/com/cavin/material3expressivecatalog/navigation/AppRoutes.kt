@@ -12,7 +12,7 @@ sealed interface Routes {
 
 sealed interface ButtonGroupRoutes : Routes {
     @Serializable
-    data object ButtonGroupListingRoute : NavKey, ButtonGroupRoutes
+    data object ListingRoute : NavKey, ButtonGroupRoutes
 
     @Serializable
     data object ButtonGroupRoute : NavKey, ButtonGroupRoutes
@@ -30,7 +30,7 @@ sealed interface ProgressIndicatorRoutes : Routes, NavKey {
     data object RefreshIndicatorRoute : NavKey, ProgressIndicatorRoutes
 
     @Serializable
-    data object ProgressIndicatorListingRoute : NavKey, ProgressIndicatorRoutes
+    data object ListingRoute : NavKey, ProgressIndicatorRoutes
 }
 
 
@@ -38,6 +38,25 @@ sealed interface ButtonRoutes : Routes, NavKey {
 
     @Serializable
     data object ButtonRoute : NavKey, ButtonRoutes
+
+}
+
+sealed interface BottomApBarRoutes : Routes, NavKey {
+
+    @Serializable
+    data object ListingRoute: NavKey, BottomApBarRoutes
+
+    @Serializable
+    data object Variant1Route: NavKey, BottomApBarRoutes
+
+    @Serializable
+    data object Variant2Route: NavKey, BottomApBarRoutes
+
+    @Serializable
+    data object Variant3Route: NavKey, BottomApBarRoutes
+
+    @Serializable
+    data object Variant4Route: NavKey, BottomApBarRoutes
 
 }
 

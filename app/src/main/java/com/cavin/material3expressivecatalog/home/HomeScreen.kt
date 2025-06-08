@@ -23,6 +23,7 @@ fun HomeScreen(
     onNavigateToButtonGroup: () -> Unit,
     onNavigateToProgressIndicator: () -> Unit,
     onNavigateToButtonRoute: () -> Unit,
+    onNavigateToBottomAppBarRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -39,6 +40,11 @@ fun HomeScreen(
             title = "Button Example",
             icon = Icons.Filled.SmartButton,
             onClickAction = onNavigateToButtonRoute
+        ),
+        HomeItemData(
+            title = "Bottom App Bar Example",
+            icon = Icons.Filled.SmartButton,
+            onClickAction = onNavigateToBottomAppBarRoute
         )
     )
 
