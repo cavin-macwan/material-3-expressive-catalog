@@ -1,4 +1,4 @@
-package com.meticha.jetpackboilerplate.home
+package com.cavin.material3expressivedemo.home
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -1,4 +1,4 @@
-package com.meticha.jetpackboilerplate
+package com.cavin.material3expressivedemo
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

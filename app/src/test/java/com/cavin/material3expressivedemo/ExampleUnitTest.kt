@@ -1,4 +1,4 @@
-package com.meticha.jetpackboilerplate
+package com.cavin.material3expressivedemo
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

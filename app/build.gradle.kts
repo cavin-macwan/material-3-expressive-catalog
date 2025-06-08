@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.meticha.jetpackboilerplate"
+    namespace = "com.cavin.material3expressivedemo"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.meticha.jetpackboilerplate"
+        applicationId = "com.cavin.material3expressivedemo"
         minSdk = 31
         targetSdk = 36
         versionCode = 1

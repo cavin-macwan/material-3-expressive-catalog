@@ -27,5 +27,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Jetpack Boilerplate"
+rootProject.name = "Material 3 Expressive Demo"
 include(":app")

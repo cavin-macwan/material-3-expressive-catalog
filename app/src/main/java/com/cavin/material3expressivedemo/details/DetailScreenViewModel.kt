@@ -1,4 +1,4 @@
-package com.meticha.jetpackboilerplate.details
+package com.cavin.material3expressivedemo.details
 
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject
