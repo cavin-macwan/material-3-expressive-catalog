@@ -8,8 +8,6 @@ sealed interface Routes {
     @Serializable
     data object HomeRoute : NavKey, Routes
 
-    data object ButtonGroupRoutes : Routes
-
 }
 
 sealed interface ButtonGroupRoutes : Routes {
@@ -23,7 +21,7 @@ sealed interface ButtonGroupRoutes : Routes {
     data object ConnectedButtonGroupRoute : NavKey, ButtonGroupRoutes
 }
 
-sealed interface ProgressIndicatorRoutes : Routes {
+sealed interface ProgressIndicatorRoutes : Routes, NavKey {
 
     @Serializable
     data object ProgressIndicatorRoute : NavKey, ProgressIndicatorRoutes

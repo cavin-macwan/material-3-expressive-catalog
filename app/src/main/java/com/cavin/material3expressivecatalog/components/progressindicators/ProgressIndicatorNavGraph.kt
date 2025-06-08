@@ -14,18 +14,8 @@ fun EntryProviderBuilder<NavKey>.progressIndicatorNavGraph(backStack: NavBackSta
 
     entry<ProgressIndicatorRoutes.ProgressIndicatorListingRoute> {
         ProgressIndicatorListingScreen(
-            onNavigateToExample = {
-                when (it) {
-                    ProgressIndicatorRoutes.ProgressIndicatorRoute -> {
-                        backStack.add(ProgressIndicatorRoutes.ProgressIndicatorRoute)
-                    }
-
-                    ProgressIndicatorRoutes.RefreshIndicatorRoute -> {
-                        backStack.add(ProgressIndicatorRoutes.RefreshIndicatorRoute)
-                    }
-
-                    else -> {}
-                }
+            onNavigateToExample = { route ->
+                backStack.add(route)
             }
         )
     }
