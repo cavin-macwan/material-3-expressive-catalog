@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.cavin.material3expressivecatalog.navigation.AppNavigation
-import com.cavin.material3expressivecatalog.ui.theme.CallBudyTheme
+import com.cavin.material3expressivecatalog.ui.theme.Material3ExpressiveCatalogTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CallBudyTheme {
+            Material3ExpressiveCatalogTheme {
                 AppNavigation()
             }
         }
