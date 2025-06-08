@@ -58,7 +58,7 @@ jobs:
                     tag_name: "v${{ steps.version.outputs.version_name }}"
                     name: "v${{ steps.version.outputs.version_name }}"
                     body: ${{ steps.changelog.outputs.changelog }}
-                    files: app/build/outputs/apk/release/app-release.apk
+                    files: app/build/outputs/apk/release/app-release-unsigned.apk
 
             -   name: Upload APK as Artifact
                 uses: actions/upload-artifact@v4
