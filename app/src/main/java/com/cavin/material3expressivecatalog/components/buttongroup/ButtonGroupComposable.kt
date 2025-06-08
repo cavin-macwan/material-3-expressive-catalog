@@ -3,15 +3,12 @@ package com.cavin.material3expressivecatalog.components.buttongroup
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.ButtonGroup
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
-fun ButtonGroupExample(modifier: Modifier = Modifier) {
+fun ButtonGroupComposable() {
     val numButtons = 10
     ButtonGroup(
         overflowIndicator = { menuState ->
