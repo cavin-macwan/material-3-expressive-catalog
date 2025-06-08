@@ -19,9 +19,6 @@
   <a href="https://github.com/cavin-macwan/material-3-expressive-catalog/stargazers">
   <img alt="GitHub Stars" src="https://badgen.net/github/stars/cavin-macwan/material-3-expressive-catalog"/>
   </a>
-  <a href="https://github.com/cavin-macwan/material-3-expressive-catalog/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/cavin-macwan/material-3-expressive-catalog"/>
-  </a>
 </p>
 
 <p align="center">  
