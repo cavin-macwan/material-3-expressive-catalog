@@ -12,7 +12,8 @@ fun EntryProviderBuilder<NavKey>.progressIndicatorNavGraph(backStack: NavBackSta
         ProgressIndicatorListingScreen(
             onNavigateToExample = { route ->
                 backStack.add(route)
-            }
+            },
+            onNavigateBack = { backStack.removeLastOrNull() }
         )
     }
 

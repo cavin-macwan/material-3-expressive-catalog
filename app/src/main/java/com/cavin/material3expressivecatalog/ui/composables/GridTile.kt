@@ -3,13 +3,13 @@ package com.cavin.material3expressivecatalog.ui.composables
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,25 +26,31 @@ fun GridTile(
 ) {
     Card(
         modifier = modifier
-            .aspectRatio(1f) // Ensures the card is square
+            .aspectRatio(1f)
             .clickable(onClick = onClick),
     ) {
-        Box(
+        Column(
             modifier = Modifier
-                .fillMaxSize() // Fills the card
-                .padding(16.dp), // Padding inside the card
-            contentAlignment = Alignment.Center // Centers content within the Box
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally // Centers Icon and Text horizontally
+            Box(
+                modifier = Modifier
+                    .weight(1f),
+                contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = icon,
                     contentDescription = title,
+                    modifier = Modifier.size(40.dp)
                 )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(text = title)
             }
+            Text(
+                text = title,
+                style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier.align(Alignment.Start)
+            )
         }
     }
 }

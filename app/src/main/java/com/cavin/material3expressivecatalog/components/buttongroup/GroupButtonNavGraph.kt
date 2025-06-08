@@ -10,22 +10,13 @@ import com.cavin.material3expressivecatalog.ui.screens.ContentScreen
 /**
  * Defines the navigation graph for the Button Group feature.
  */
- fun EntryProviderBuilder<NavKey>.groupButtonNavGraph(backStack: NavBackStack) {
+fun EntryProviderBuilder<NavKey>.groupButtonNavGraph(backStack: NavBackStack) {
     entry<ButtonGroupRoutes.ListingRoute> {
         ButtonGroupListingScreen(
             onNavigateToExample = { route ->
-                when (route) {
-                    ButtonGroupRoutes.ListingRoute -> {
-                        // No-op or handle as needed, maybe log or refresh
-                    }
-                    ButtonGroupRoutes.ButtonGroupRoute -> {
-                        backStack.add(ButtonGroupRoutes.ButtonGroupRoute)
-                    }
-                    ButtonGroupRoutes.ConnectedButtonGroupRoute -> {
-                        backStack.add(ButtonGroupRoutes.ConnectedButtonGroupRoute)
-                    }
-                }
-            }
+                backStack.add(route)
+            },
+            onNavigateBack = { backStack.removeLastOrNull() }
         )
     }
 

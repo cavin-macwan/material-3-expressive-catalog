@@ -10,7 +10,7 @@ sealed interface Routes {
 
 }
 
-sealed interface ButtonGroupRoutes : Routes {
+sealed interface ButtonGroupRoutes : Routes, NavKey {
     @Serializable
     data object ListingRoute : NavKey, ButtonGroupRoutes
 
@@ -44,19 +44,19 @@ sealed interface ButtonRoutes : Routes, NavKey {
 sealed interface BottomApBarRoutes : Routes, NavKey {
 
     @Serializable
-    data object ListingRoute: NavKey, BottomApBarRoutes
+    data object ListingRoute : NavKey, BottomApBarRoutes
 
     @Serializable
-    data object Variant1Route: NavKey, BottomApBarRoutes
+    data object Variant1Route : NavKey, BottomApBarRoutes
 
     @Serializable
-    data object Variant2Route: NavKey, BottomApBarRoutes
+    data object Variant2Route : NavKey, BottomApBarRoutes
 
     @Serializable
-    data object Variant3Route: NavKey, BottomApBarRoutes
+    data object Variant3Route : NavKey, BottomApBarRoutes
 
     @Serializable
-    data object Variant4Route: NavKey, BottomApBarRoutes
+    data object Variant4Route : NavKey, BottomApBarRoutes
 
 }
 

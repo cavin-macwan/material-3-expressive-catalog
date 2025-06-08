@@ -5,13 +5,19 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PhoneIphone
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.SmartButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.cavin.material3expressivecatalog.navigation.ButtonGroupRoutes
@@ -20,28 +26,53 @@ import com.cavin.material3expressivecatalog.ui.composables.ListTile
 
 @Composable
 fun ButtonGroupListingScreen(
-    onNavigateToExample: (ButtonGroupRoutes) -> Unit
+    onNavigateToExample: (ButtonGroupRoutes) -> Unit,
+    onNavigateBack: () -> Unit
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Button Group") }
+                title = { Text("Button Group") },
+                navigationIcon = {
+                    IconButton(onClick = onNavigateBack) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Back"
+                        )
+                    }
+                }
             )
         }) {
         Column(
             modifier = Modifier
                 .padding(it)
                 .padding(horizontal = 16.dp)
+                .verticalScroll(rememberScrollState())
         ) {
-            Icon(
-                imageVector = Icons.Filled.PhoneIphone,
-                contentDescription = "Back",
-                modifier = Modifier.size(100.dp)
-            )
-
             Spacer(Modifier.height(16.dp))
+            Icon(
+                imageVector = Icons.Filled.SmartButton,
+                contentDescription = "Button Group",
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Alignment.CenterHorizontally),
+                tint = MaterialTheme.colorScheme.primary
+            )
+            Spacer(Modifier.height(16.dp))
+            Text(
+                text = "Button Groups",
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = "Button groups allow users to select one or more options from a set. They are often used for toggling states or filtering content.",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            Spacer(Modifier.height(24.dp))
 
-            Text(text = "Examples")
+            Text(text = "Examples", style = MaterialTheme.typography.titleMedium)
 
             Spacer(Modifier.height(8.dp))
 
@@ -50,7 +81,7 @@ fun ButtonGroupListingScreen(
                     onNavigateToExample(ButtonGroupRoutes.ButtonGroupRoute)
                 },
                 title = "Button Group",
-                description = "Example of Button Group"
+                description = "Example of a standard Button Group"
             )
 
             ListTile(
@@ -58,8 +89,9 @@ fun ButtonGroupListingScreen(
                     onNavigateToExample(ButtonGroupRoutes.ConnectedButtonGroupRoute)
                 },
                 title = "Connected Button Group",
-                description = "Example of Connected Button Group"
+                description = "Example of a Button Group where buttons are visually connected"
             )
+            Spacer(Modifier.height(16.dp))
         }
     }
 }
