@@ -98,7 +98,7 @@ fun HomeScreen(
                 GridTile(
                     title = homeItem.title,
                     icon = homeItem.icon,
-                    onClick = { homeItem.onClickAction() }
+                    onClick = { homeItem.onClickAction() },
                 )
             }
         }
