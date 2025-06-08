@@ -31,8 +31,12 @@ android {
         applicationId = "com.cavin.material3expressivecatalog"
         minSdk = 31
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+
+        val versionNameFile = rootProject.file("version.txt")
+        versionName = versionNameFile.readText().trim()
+
+        val versionCodeFromGit = "git rev-list --count HEAD".runCommand(rootDir).toInt()
+        versionCode = versionCodeFromGit
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -132,4 +136,15 @@ tasks.register("printVersionName") {
     doLast {
         println(android.defaultConfig.versionName)
     }
+}
+
+fun String.runCommand(workingDir: File): String {
+    return ProcessBuilder(*split(" ").toTypedArray())
+        .directory(workingDir)
+        .redirectErrorStream(true)
+        .start()
+        .inputStream
+        .bufferedReader()
+        .readText()
+        .trim()
 }
