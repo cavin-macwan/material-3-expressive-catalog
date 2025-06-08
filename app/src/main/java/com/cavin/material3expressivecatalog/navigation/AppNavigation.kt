@@ -13,6 +13,7 @@ import com.cavin.material3expressivecatalog.home.HomeScreen
 import com.cavin.material3expressivecatalog.components.buttongroup.groupButtonNavGraph
 import com.cavin.material3expressivecatalog.components.buttons.buttonNavGraph
 import com.cavin.material3expressivecatalog.components.fab.fabMenuNavGraph
+import com.cavin.material3expressivecatalog.components.floatingtoolbar.floatingToolBarNavGraph
 import com.cavin.material3expressivecatalog.components.progressindicators.progressIndicatorNavGraph
 
 
@@ -38,6 +39,7 @@ fun AppNavigation() {
                     onNavigateToButtonRoute = { backStack.add(ButtonRoutes.ButtonRoute) },
                     onNavigateToBottomAppBarRoute = { backStack.add(BottomApBarRoutes.ListingRoute) },
                     onNavigateToFabMenuRoute = { backStack.add(FabMenuRoutes.FabMenuRoute) },
+                    onNavigateToFloatingToolBarRoute = { backStack.add(FloatingToolBarRoutes.ListingRoute) }
                 )
             }
 
@@ -50,6 +52,8 @@ fun AppNavigation() {
             bottomAppBarNavGraph(backStack)
 
             fabMenuNavGraph(backStack)
+
+            floatingToolBarNavGraph(backStack)
         }
     )
 }

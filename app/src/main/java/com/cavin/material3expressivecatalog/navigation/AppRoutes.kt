@@ -67,6 +67,20 @@ sealed interface BottomApBarRoutes : Routes, NavKey {
 
 }
 
+sealed interface FloatingToolBarRoutes : Routes, NavKey {
+
+    @Serializable
+    data object ListingRoute : NavKey, FloatingToolBarRoutes
+
+    @Serializable
+    data object Variant1Route : NavKey, FloatingToolBarRoutes
+
+    @Serializable
+    data object Variant2Route : NavKey, FloatingToolBarRoutes
+
+
+}
+
 
 
 

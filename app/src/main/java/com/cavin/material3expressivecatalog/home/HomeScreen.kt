@@ -7,8 +7,9 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
+import androidx.compose.material.icons.automirrored.filled.Subject // Added import
 import androidx.compose.material.icons.filled.Dock
-import androidx.compose.material.icons.filled.MenuOpen
+// import androidx.compose.material.icons.filled.MenuOpen // Duplicate, will be handled by AutoMirrored
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material.icons.filled.ViewWeek
@@ -28,6 +29,7 @@ fun HomeScreen(
     onNavigateToButtonRoute: () -> Unit,
     onNavigateToBottomAppBarRoute: () -> Unit,
     onNavigateToFabMenuRoute: () -> Unit,
+    onNavigateToFloatingToolBarRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -54,6 +56,11 @@ fun HomeScreen(
             title = "Fab Menu Example",
             icon = Icons.AutoMirrored.Filled.MenuOpen,
             onClickAction = onNavigateToFabMenuRoute
+        ),
+        HomeItemData(
+            title = "Floating ToolBar Example",
+            icon = Icons.AutoMirrored.Filled.Subject,
+            onClickAction = onNavigateToFloatingToolBarRoute
         ),
     )
 
