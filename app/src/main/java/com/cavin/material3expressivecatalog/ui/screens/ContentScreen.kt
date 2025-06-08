@@ -1,4 +1,4 @@
-package com.cavin.material3expressivecatalog.ui
+package com.cavin.material3expressivecatalog.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

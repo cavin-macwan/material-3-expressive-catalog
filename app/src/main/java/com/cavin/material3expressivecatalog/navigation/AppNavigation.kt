@@ -2,30 +2,15 @@ package com.cavin.material3expressivecatalog.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
-import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
-import com.cavin.material3expressivecatalog.components.AppBarRowExample
-import com.cavin.material3expressivecatalog.components.buttongroup.ButtonGroupExample
 import com.cavin.material3expressivecatalog.home.HomeScreen
-import com.cavin.material3expressivecatalog.ui.ContentScreen
-import kotlinx.serialization.Serializable
-
-sealed interface Routes {
-
-    @Serializable
-    data object HomeRoute : NavKey, Routes
-
-    @Serializable
-    data object ButtonGroupRoute : NavKey, Routes
-
-    @Serializable
-    data object AppBarRowExampleRoute : NavKey, Routes
-}
+import com.cavin.material3expressivecatalog.components.buttongroup.groupButtonNavGraph
+import com.cavin.material3expressivecatalog.components.progressindicators.progressIndicatorNavGraph
 
 
 @Composable
@@ -45,29 +30,16 @@ fun AppNavigation() {
         entryProvider = entryProvider {
             entry<Routes.HomeRoute> {
                 HomeScreen(
-                    onNavigateToExample = { routes ->
-                        when (routes) {
-                            Routes.AppBarRowExampleRoute -> {
-                                backStack.add(Routes.AppBarRowExampleRoute)
-                            }
-
-                            Routes.ButtonGroupRoute -> {
-                                backStack.add(Routes.ButtonGroupRoute)
-                            }
-
-                            Routes.HomeRoute -> {}
-                        }
-                    }
+                    onNavigateToButtonGroup = { backStack.add(ButtonGroupRoutes.ButtonGroupListingRoute) },
+                    onNavigateToProgressIndicator = { backStack.add(ProgressIndicatorRoutes.ProgressIndicatorListingRoute) }
                 )
             }
-            entry<Routes.AppBarRowExampleRoute> {
-                AppBarRowExample()
-            }
-            entry<Routes.ButtonGroupRoute> {
-                ContentScreen {
-                    ButtonGroupExample()
-                }
-            }
+
+            groupButtonNavGraph(backStack)
+
+            progressIndicatorNavGraph(backStack)
         }
     )
 }
+
+
