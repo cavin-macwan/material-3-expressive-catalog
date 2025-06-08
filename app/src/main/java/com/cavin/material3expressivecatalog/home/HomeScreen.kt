@@ -6,9 +6,12 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.RadioButtonChecked
+import androidx.compose.material.icons.automirrored.filled.MenuOpen
+import androidx.compose.material.icons.filled.Dock
+import androidx.compose.material.icons.filled.MenuOpen
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.SmartButton
+import androidx.compose.material.icons.filled.TouchApp
+import androidx.compose.material.icons.filled.ViewWeek
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -24,11 +27,12 @@ fun HomeScreen(
     onNavigateToProgressIndicator: () -> Unit,
     onNavigateToButtonRoute: () -> Unit,
     onNavigateToBottomAppBarRoute: () -> Unit,
+    onNavigateToFabMenuRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
             title = "Button Group Example",
-            icon = Icons.Filled.RadioButtonChecked,
+            icon = Icons.Filled.ViewWeek,
             onClickAction = onNavigateToButtonGroup
         ),
         HomeItemData(
@@ -38,14 +42,19 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Button Example",
-            icon = Icons.Filled.SmartButton,
+            icon = Icons.Filled.TouchApp,
             onClickAction = onNavigateToButtonRoute
         ),
         HomeItemData(
             title = "Bottom App Bar Example",
-            icon = Icons.Filled.SmartButton,
+            icon = Icons.Filled.Dock,
             onClickAction = onNavigateToBottomAppBarRoute
-        )
+        ),
+        HomeItemData(
+            title = "Fab Menu Example",
+            icon = Icons.AutoMirrored.Filled.MenuOpen,
+            onClickAction = onNavigateToFabMenuRoute
+        ),
     )
 
     Scaffold(

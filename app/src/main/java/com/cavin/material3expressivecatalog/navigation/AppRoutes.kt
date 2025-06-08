@@ -41,6 +41,13 @@ sealed interface ButtonRoutes : Routes, NavKey {
 
 }
 
+sealed interface FabMenuRoutes : Routes, NavKey {
+
+    @Serializable
+    data object FabMenuRoute : NavKey, FabMenuRoutes
+
+}
+
 sealed interface BottomApBarRoutes : Routes, NavKey {
 
     @Serializable
