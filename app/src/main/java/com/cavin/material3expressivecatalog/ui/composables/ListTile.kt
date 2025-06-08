@@ -26,10 +26,10 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun ListTile(
-    modifier: Modifier = Modifier,
     onClick: () -> Unit,
     title: String,
     description: String,
+    modifier: Modifier = Modifier,
 ) {
     ListItem(
         modifier = modifier.clickable(onClick = onClick),
@@ -40,7 +40,6 @@ fun ListTile(
                 imageVector = Icons.AutoMirrored.Filled.ArrowForwardIos,
                 contentDescription = "Forward",
             )
-        }
+        },
     )
-
 }

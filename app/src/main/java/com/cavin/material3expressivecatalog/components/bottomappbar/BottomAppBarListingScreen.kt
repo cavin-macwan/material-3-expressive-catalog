@@ -41,9 +41,11 @@ import com.cavin.material3expressivecatalog.ui.composables.ListTile
 @Composable
 fun BottomAppBarListingScreen(
     onNavigateToExample: (BottomApBarRoutes) -> Unit,
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Scaffold(
+        modifier = modifier,
         topBar = {
             TopAppBar(
                 title = { Text("Bottom AppBar") },
@@ -51,17 +53,18 @@ fun BottomAppBarListingScreen(
                     IconButton(onClick = onNavigateBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = "Back",
                         )
                     }
-                }
+                },
             )
-        }) {
+        },
+    ) {
         Column(
             modifier = Modifier
                 .padding(it)
                 .padding(horizontal = 16.dp)
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
         ) {
             Spacer(Modifier.height(16.dp))
             Icon(
@@ -70,19 +73,20 @@ fun BottomAppBarListingScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .align(Alignment.CenterHorizontally),
-                tint = MaterialTheme.colorScheme.primary
+                tint = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
             Text(
                 text = "Bottom App Bar",
                 style = MaterialTheme.typography.headlineMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Bottom App Bars provide access to navigation and key actions at the bottom of mobile screens. They can optionally include a Floating Action Button.",
+                text = "Bottom App Bars provide access to navigation and key actions at the " +
+                    "bottom of mobile screens. They can optionally include a Floating Action Button.",
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(24.dp))
 
@@ -95,7 +99,7 @@ fun BottomAppBarListingScreen(
                     onNavigateToExample(BottomApBarRoutes.Variant1Route)
                 },
                 title = "Variant 1",
-                description = "Basic Bottom App Bar"
+                description = "Basic Bottom App Bar",
             )
 
             ListTile(
@@ -103,7 +107,7 @@ fun BottomAppBarListingScreen(
                     onNavigateToExample(BottomApBarRoutes.Variant2Route)
                 },
                 title = "Variant 2",
-                description = "Bottom App Bar with FAB"
+                description = "Bottom App Bar with FAB",
             )
 
             ListTile(
@@ -111,7 +115,7 @@ fun BottomAppBarListingScreen(
                     onNavigateToExample(BottomApBarRoutes.Variant3Route)
                 },
                 title = "Variant 3",
-                description = "Bottom App Bar with more actions"
+                description = "Bottom App Bar with more actions",
             )
 
             ListTile(
@@ -119,7 +123,7 @@ fun BottomAppBarListingScreen(
                     onNavigateToExample(BottomApBarRoutes.Variant4Route)
                 },
                 title = "Variant 4",
-                description = "Another Bottom App Bar layout"
+                description = "Another Bottom App Bar layout",
             )
             Spacer(Modifier.height(16.dp))
         }

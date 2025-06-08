@@ -38,31 +38,29 @@ import androidx.compose.ui.unit.dp
 import com.cavin.material3expressivecatalog.navigation.ProgressIndicatorRoutes
 import com.cavin.material3expressivecatalog.ui.composables.ListTile
 
-
 @Composable
 fun ProgressIndicatorListingScreen(
     onNavigateToExample: (ProgressIndicatorRoutes) -> Unit,
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Progress Indicators") },
-                navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
-                        )
-                    }
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Progress Indicators") },
+            navigationIcon = {
+                IconButton(onClick = onNavigateBack) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Back",
+                    )
                 }
-            )
-        }) {
+            },
+        )
+    }) {
         Column(
             modifier = Modifier
                 .padding(it)
                 .padding(horizontal = 16.dp)
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
         ) {
             Spacer(Modifier.height(16.dp))
             Icon(
@@ -71,19 +69,20 @@ fun ProgressIndicatorListingScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .align(Alignment.CenterHorizontally),
-                tint = MaterialTheme.colorScheme.primary
+                tint = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
             Text(
                 text = "Progress Indicators",
                 style = MaterialTheme.typography.headlineMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.",
+                text = "Progress indicators inform users about the status of ongoing " +
+                    "processes, such as loading an app, submitting a form, or saving updates.",
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(24.dp))
 
@@ -96,7 +95,7 @@ fun ProgressIndicatorListingScreen(
                     onNavigateToExample(ProgressIndicatorRoutes.ProgressIndicatorRoute)
                 },
                 title = "Progress Indicator",
-                description = "Example of various progress indicators"
+                description = "Example of various progress indicators",
             )
 
             ListTile(
@@ -104,7 +103,7 @@ fun ProgressIndicatorListingScreen(
                     onNavigateToExample(ProgressIndicatorRoutes.RefreshIndicatorRoute)
                 },
                 title = "Refresh Indicator Example",
-                description = "Example of Pull to Refresh"
+                description = "Example of Pull to Refresh",
             )
             Spacer(Modifier.height(16.dp))
         }

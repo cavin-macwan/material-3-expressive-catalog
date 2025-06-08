@@ -30,11 +30,13 @@ import androidx.compose.material3.FlexibleBottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun BottomAppBarVariant1() {
+fun BottomAppBarVariant1(modifier: Modifier = Modifier) {
     FlexibleBottomAppBar(
+        modifier = modifier,
         contentPadding = PaddingValues(horizontal = 96.dp),
         horizontalArrangement = BottomAppBarDefaults.FlexibleFixedHorizontalArrangement,
     ) {
@@ -47,56 +49,56 @@ fun BottomAppBarVariant1() {
                         } else {
                             menuState.show()
                         }
-                    }
+                    },
                 ) {
                     Icon(
                         imageVector = Icons.Filled.MoreVert,
-                        contentDescription = "Localized description"
+                        contentDescription = "Localized description",
                     )
                 }
-            }
+            },
         ) {
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = {
                     Icon(
                         Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Localized description"
+                        contentDescription = "Localized description",
                     )
                 },
-                label = "ArrowBack"
+                label = "ArrowBack",
             )
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = {
                     Icon(
                         Icons.AutoMirrored.Filled.ArrowForward,
-                        contentDescription = "Localized description"
+                        contentDescription = "Localized description",
                     )
                 },
-                label = "ArrowForward"
+                label = "ArrowForward",
             )
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = { Icon(Icons.Filled.Add, contentDescription = "Localized description") },
-                label = "Add"
+                label = "Add",
             )
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = { Icon(Icons.Filled.Check, contentDescription = "Localized description") },
-                label = "Check"
+                label = "Check",
             )
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = { Icon(Icons.Filled.Edit, contentDescription = "Localized description") },
-                label = "Edit"
+                label = "Edit",
             )
             clickableItem(
                 onClick = { /* doSomething() */ },
                 icon = {
                     Icon(Icons.Filled.Favorite, contentDescription = "Localized description")
                 },
-                label = "Favorite"
+                label = "Favorite",
             )
         }
     }

@@ -54,18 +54,18 @@ fun BottomAppBarVariant4() {
                     IconButton(onClick = { /* doSomething() */ }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Localized description"
+                            contentDescription = "Localized description",
                         )
                     }
                     IconButton(onClick = { /* doSomething() */ }) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowForward,
-                            contentDescription = "Localized description"
+                            contentDescription = "Localized description",
                         )
                     }
                     FilledIconButton(
                         modifier = Modifier.width(56.dp),
-                        onClick = { /* doSomething() */ }
+                        onClick = { /* doSomething() */ },
                     ) {
                         Icon(Icons.Filled.Add, contentDescription = "Localized description")
                     }
@@ -75,13 +75,13 @@ fun BottomAppBarVariant4() {
                     IconButton(onClick = { /* doSomething() */ }) {
                         Icon(Icons.Filled.Edit, contentDescription = "Localized description")
                     }
-                }
+                },
             )
         },
         content = { innerPadding ->
             LazyColumn(
                 contentPadding = innerPadding,
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 val list = (0..75).map { it.toString() }
                 items(count = list.size) {
@@ -90,10 +90,10 @@ fun BottomAppBarVariant4() {
                         style = MaterialTheme.typography.bodyLarge,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 16.dp)
+                            .padding(horizontal = 16.dp),
                     )
                 }
             }
-        }
+        },
     )
 }

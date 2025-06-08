@@ -71,21 +71,22 @@ fun FabMenuComposable(onNavigateToBack: () -> Unit) {
                     IconButton(onClick = onNavigateToBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
+                            contentDescription = "Back",
                         )
                     }
-                }
+                },
             )
-        }
+        },
     ) {
         val listState = rememberLazyListState()
         val fabVisible by remember { derivedStateOf { listState.firstVisibleItemIndex == 0 } }
 
         Box {
             LazyColumn(
-                state = listState, modifier = Modifier
+                state = listState,
+                modifier = Modifier
                     .padding(it)
-                    .fillMaxSize()
+                    .fillMaxSize(),
             ) {
                 for (index in 0 until 100) {
                     item {
@@ -94,7 +95,7 @@ fun FabMenuComposable(onNavigateToBack: () -> Unit) {
                             modifier = Modifier
                                 .clickable {}
                                 .fillMaxWidth()
-                                .padding(24.dp)
+                                .padding(24.dp),
                         )
                     }
                 }
@@ -120,18 +121,18 @@ fun FabMenuComposable(onNavigateToBack: () -> Unit) {
                 button = {
                     ToggleFloatingActionButton(
                         modifier =
-                            Modifier
-                                .semantics {
-                                    traversalIndex = -1f
-                                    stateDescription =
-                                        if (fabMenuExpanded) "Expanded" else "Collapsed"
-                                }
-                                .animateFloatingActionButton(
-                                    visible = fabVisible || fabMenuExpanded,
-                                    alignment = Alignment.BottomEnd
-                                ),
+                        Modifier
+                            .semantics {
+                                traversalIndex = -1f
+                                stateDescription =
+                                    if (fabMenuExpanded) "Expanded" else "Collapsed"
+                            }
+                            .animateFloatingActionButton(
+                                visible = fabVisible || fabMenuExpanded,
+                                alignment = Alignment.BottomEnd,
+                            ),
                         checked = fabMenuExpanded,
-                        onCheckedChange = { fabMenuExpanded = !fabMenuExpanded }
+                        onCheckedChange = { fabMenuExpanded = !fabMenuExpanded },
                     ) {
                         val imageVector by remember {
                             derivedStateOf {
@@ -141,32 +142,32 @@ fun FabMenuComposable(onNavigateToBack: () -> Unit) {
                         Icon(
                             painter = rememberVectorPainter(imageVector),
                             contentDescription = null,
-                            modifier = Modifier.animateIcon({ checkedProgress })
+                            modifier = Modifier.animateIcon({ checkedProgress }),
                         )
                     }
-                }
+                },
             ) {
                 items.forEachIndexed { i, item ->
                     FloatingActionButtonMenuItem(
                         modifier =
-                            Modifier.semantics {
-                                isTraversalGroup = true
-                                // Add a custom a11y action to allow closing the menu when focusing
-                                // the last menu item, since the close button comes before the first
-                                // menu item in the traversal order.
-                                if (i == items.size - 1) {
-                                    customActions =
-                                        listOf(
-                                            CustomAccessibilityAction(
-                                                label = "Close menu",
-                                                action = {
-                                                    fabMenuExpanded = false
-                                                    true
-                                                }
-                                            )
-                                        )
-                                }
-                            },
+                        Modifier.semantics {
+                            isTraversalGroup = true
+                            // Add a custom a11y action to allow closing the menu when focusing
+                            // the last menu item, since the close button comes before the first
+                            // menu item in the traversal order.
+                            if (i == items.size - 1) {
+                                customActions =
+                                    listOf(
+                                        CustomAccessibilityAction(
+                                            label = "Close menu",
+                                            action = {
+                                                fabMenuExpanded = false
+                                                true
+                                            },
+                                        ),
+                                    )
+                            }
+                        },
                         onClick = { fabMenuExpanded = false },
                         icon = { Icon(item.first, contentDescription = null) },
                         text = { Text(text = item.second) },
@@ -175,5 +176,4 @@ fun FabMenuComposable(onNavigateToBack: () -> Unit) {
             }
         }
     }
-
 }

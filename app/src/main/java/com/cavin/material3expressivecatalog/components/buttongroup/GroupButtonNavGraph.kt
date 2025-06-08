@@ -31,7 +31,7 @@ fun EntryProviderBuilder<NavKey>.groupButtonNavGraph(backStack: NavBackStack) {
             onNavigateToExample = { route ->
                 backStack.add(route)
             },
-            onNavigateBack = { backStack.removeLastOrNull() }
+            onNavigateBack = { backStack.removeLastOrNull() },
         )
     }
 

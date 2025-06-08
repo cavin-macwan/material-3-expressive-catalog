@@ -53,7 +53,7 @@ fun FloatingToolBarVariant2() {
                 LazyColumn(
                     state = rememberLazyListState(),
                     contentPadding = innerPadding,
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     val list = (0..75).map { it.toString() }
                     items(count = list.size) {
@@ -62,7 +62,7 @@ fun FloatingToolBarVariant2() {
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 16.dp)
+                                .padding(horizontal = 16.dp),
                         )
                     }
                 }
@@ -75,27 +75,27 @@ fun FloatingToolBarVariant2() {
                         Icon(
                             Icons.Filled.ArrowUpward,
                             contentDescription = "Scroll to top",
-                            modifier = Modifier.padding(horizontal = 8.dp)
+                            modifier = Modifier.padding(horizontal = 8.dp),
                         )
                     },
                     trailingContent = {
                         Icon(
                             Icons.Filled.MoreVert,
                             contentDescription = "More options",
-                            modifier = Modifier.padding(horizontal = 8.dp)
+                            modifier = Modifier.padding(horizontal = 8.dp),
                         )
                     },
                     content = {
                         FilledIconButton(
                             modifier = Modifier.width(64.dp),
-                            onClick = { /* doSomething() */ }
+                            onClick = { /* doSomething() */ },
                         ) {
                             Icon(Icons.Filled.Add, contentDescription = "Localized description")
                         }
                     },
-                    scrollBehavior = exitAlwaysScrollBehavior
+                    scrollBehavior = exitAlwaysScrollBehavior,
                 )
             }
-        }
+        },
     )
 }

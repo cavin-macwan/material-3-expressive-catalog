@@ -49,34 +49,33 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ProgressIndicatorComposables() {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Progress Indicator") }
-            )
-        }) {
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Progress Indicator") },
+        )
+    }) {
         var progress by remember { mutableFloatStateOf(0.1f) }
         val animatedProgress by
-        animateFloatAsState(
-            targetValue = progress,
-            animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
-        )
+            animateFloatAsState(
+                targetValue = progress,
+                animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec,
+            )
 
         val containedAnimatedProgress by
-        animateFloatAsState(
-            targetValue = progress,
-            animationSpec =
+            animateFloatAsState(
+                targetValue = progress,
+                animationSpec =
                 spring(
                     dampingRatio = Spring.DampingRatioNoBouncy,
                     stiffness = Spring.StiffnessVeryLow,
-                    visibilityThreshold = 1 / 1000f
-                )
-        )
-
+                    visibilityThreshold = 1 / 1000f,
+                ),
+            )
 
         val thickStrokeWidth = with(LocalDensity.current) { 8.dp.toPx() }
-        val thickStroke =
-            remember(thickStrokeWidth) { Stroke(width = thickStrokeWidth, cap = StrokeCap.Round) }
+        val thickStroke = remember(thickStrokeWidth) {
+            Stroke(width = thickStrokeWidth, cap = StrokeCap.Round)
+        }
 
         Column(
             modifier = Modifier
@@ -84,22 +83,19 @@ fun ProgressIndicatorComposables() {
                 .fillMaxSize()
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-
             Row(
                 horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             ) {
-
                 CircularWavyProgressIndicator(progress = { 0.9f })
-
 
                 CircularWavyProgressIndicator(
                     progress = { animatedProgress },
                     // Thick size is slightly larger than the
                     // WavyProgressIndicatorDefaults.CircularContainerSize default
-                    modifier = Modifier.size(52.dp), // Thick size is slightly larger than the default
+                    modifier = Modifier.size(52.dp),
                     stroke = thickStroke,
                     trackStroke = thickStroke,
                 )
@@ -119,8 +115,6 @@ fun ProgressIndicatorComposables() {
                 valueRange = 0f..1f,
                 onValueChange = { progress = it },
             )
-
         }
     }
-
 }

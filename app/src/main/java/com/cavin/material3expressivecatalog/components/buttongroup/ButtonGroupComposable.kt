@@ -34,14 +34,14 @@ fun ButtonGroupComposable() {
                     } else {
                         menuState.show()
                     }
-                }
+                },
             ) {
                 Icon(
                     imageVector = Icons.Filled.MoreVert,
-                    contentDescription = "Localized description"
+                    contentDescription = "Localized description",
                 )
             }
-        }
+        },
     ) {
         for (i in 0 until numButtons) {
             clickableItem(onClick = {}, label = "$i")

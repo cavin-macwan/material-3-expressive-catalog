@@ -22,9 +22,8 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
-import androidx.compose.material.icons.automirrored.filled.Subject // Added import
+import androidx.compose.material.icons.automirrored.filled.Subject
 import androidx.compose.material.icons.filled.Dock
-// import androidx.compose.material.icons.filled.MenuOpen // Duplicate, will be handled by AutoMirrored
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material.icons.filled.ViewWeek
@@ -35,7 +34,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.cavin.material3expressivecatalog.ui.composables.GridTile
-
 
 @Composable
 fun HomeScreen(
@@ -50,32 +48,32 @@ fun HomeScreen(
         HomeItemData(
             title = "Button Group Example",
             icon = Icons.Filled.ViewWeek,
-            onClickAction = onNavigateToButtonGroup
+            onClickAction = onNavigateToButtonGroup,
         ),
         HomeItemData(
             title = "Progress Indicator Example",
             icon = Icons.Filled.Refresh,
-            onClickAction = onNavigateToProgressIndicator
+            onClickAction = onNavigateToProgressIndicator,
         ),
         HomeItemData(
             title = "Button Example",
             icon = Icons.Filled.TouchApp,
-            onClickAction = onNavigateToButtonRoute
+            onClickAction = onNavigateToButtonRoute,
         ),
         HomeItemData(
             title = "Bottom App Bar Example",
             icon = Icons.Filled.Dock,
-            onClickAction = onNavigateToBottomAppBarRoute
+            onClickAction = onNavigateToBottomAppBarRoute,
         ),
         HomeItemData(
             title = "Fab Menu Example",
             icon = Icons.AutoMirrored.Filled.MenuOpen,
-            onClickAction = onNavigateToFabMenuRoute
+            onClickAction = onNavigateToFabMenuRoute,
         ),
         HomeItemData(
             title = "Floating ToolBar Example",
             icon = Icons.AutoMirrored.Filled.Subject,
-            onClickAction = onNavigateToFloatingToolBarRoute
+            onClickAction = onNavigateToFloatingToolBarRoute,
         ),
     )
 
@@ -86,7 +84,7 @@ fun HomeScreen(
                     Text("Material 3 Expressive Demo")
                 },
             )
-        }
+        },
     ) { paddingValues ->
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
@@ -94,12 +92,14 @@ fun HomeScreen(
                 .padding(paddingValues)
                 .padding(horizontal = 24.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             items(homeItems) { homeItem ->
-                GridTile(title = homeItem.title, icon = homeItem.icon) {
-                    homeItem.onClickAction()
-                }
+                GridTile(
+                    title = homeItem.title,
+                    icon = homeItem.icon,
+                    onClick = { homeItem.onClickAction() }
+                )
             }
         }
     }

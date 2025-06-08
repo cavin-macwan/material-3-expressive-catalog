@@ -38,31 +38,29 @@ import androidx.compose.ui.unit.dp
 import com.cavin.material3expressivecatalog.navigation.ButtonGroupRoutes
 import com.cavin.material3expressivecatalog.ui.composables.ListTile
 
-
 @Composable
 fun ButtonGroupListingScreen(
     onNavigateToExample: (ButtonGroupRoutes) -> Unit,
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
 ) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Button Group") },
-                navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
-                        )
-                    }
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Button Group") },
+            navigationIcon = {
+                IconButton(onClick = onNavigateBack) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Back",
+                    )
                 }
-            )
-        }) {
+            },
+        )
+    }) {
         Column(
             modifier = Modifier
                 .padding(it)
                 .padding(horizontal = 16.dp)
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
         ) {
             Spacer(Modifier.height(16.dp))
             Icon(
@@ -71,19 +69,20 @@ fun ButtonGroupListingScreen(
                 modifier = Modifier
                     .size(100.dp)
                     .align(Alignment.CenterHorizontally),
-                tint = MaterialTheme.colorScheme.primary
+                tint = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
             Text(
                 text = "Button Groups",
                 style = MaterialTheme.typography.headlineMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Button groups allow users to select one or more options from a set. They are often used for toggling states or filtering content.",
+                text = "Button groups allow users to select one or more options from a set." +
+                    " They are often used for toggling states or filtering content.",
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(24.dp))
 
@@ -96,7 +95,7 @@ fun ButtonGroupListingScreen(
                     onNavigateToExample(ButtonGroupRoutes.ButtonGroupRoute)
                 },
                 title = "Button Group",
-                description = "Example of a standard Button Group"
+                description = "Example of a standard Button Group",
             )
 
             ListTile(
@@ -104,7 +103,7 @@ fun ButtonGroupListingScreen(
                     onNavigateToExample(ButtonGroupRoutes.ConnectedButtonGroupRoute)
                 },
                 title = "Connected Button Group",
-                description = "Example of a Button Group where buttons are visually connected"
+                description = "Example of a Button Group where buttons are visually connected",
             )
             Spacer(Modifier.height(16.dp))
         }

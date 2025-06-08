@@ -26,7 +26,7 @@ fun EntryProviderBuilder<NavKey>.bottomAppBarNavGraph(backStack: NavBackStack) {
     entry<BottomApBarRoutes.ListingRoute> {
         BottomAppBarListingScreen(
             onNavigateToExample = { backStack.add(it) },
-            onNavigateBack = { backStack.removeLastOrNull() }
+            onNavigateBack = { backStack.removeLastOrNull() },
         )
     }
 
@@ -47,6 +47,4 @@ fun EntryProviderBuilder<NavKey>.bottomAppBarNavGraph(backStack: NavBackStack) {
     entry<BottomApBarRoutes.Variant4Route> {
         BottomAppBarVariant4()
     }
-
-
 }

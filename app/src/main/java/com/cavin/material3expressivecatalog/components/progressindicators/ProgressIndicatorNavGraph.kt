@@ -22,13 +22,12 @@ import androidx.navigation3.runtime.entry
 import com.cavin.material3expressivecatalog.navigation.ProgressIndicatorRoutes
 
 fun EntryProviderBuilder<NavKey>.progressIndicatorNavGraph(backStack: NavBackStack) {
-
     entry<ProgressIndicatorRoutes.ListingRoute> {
         ProgressIndicatorListingScreen(
             onNavigateToExample = { route ->
                 backStack.add(route)
             },
-            onNavigateBack = { backStack.removeLastOrNull() }
+            onNavigateBack = { backStack.removeLastOrNull() },
         )
     }
 

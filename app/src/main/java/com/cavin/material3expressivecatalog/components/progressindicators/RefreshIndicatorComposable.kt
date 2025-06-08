@@ -46,7 +46,6 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun RefreshIndicatorComposable() {
-
     var itemCount by remember { mutableIntStateOf(15) }
     var isRefreshing by remember { mutableStateOf(false) }
     val state = rememberPullToRefreshState()
@@ -62,17 +61,20 @@ fun RefreshIndicatorComposable() {
     }
 
     val scaleFraction = {
-        if (isRefreshing) 1f
-        else LinearOutSlowInEasing.transform(state.distanceFraction).coerceIn(0f, 1f)
+        if (isRefreshing) {
+            1f
+        } else {
+            LinearOutSlowInEasing.transform(state.distanceFraction).coerceIn(0f, 1f)
+        }
     }
 
     Scaffold(
         modifier =
-            Modifier.pullToRefresh(
-                state = state,
-                isRefreshing = isRefreshing,
-                onRefresh = onRefresh
-            ),
+        Modifier.pullToRefresh(
+            state = state,
+            isRefreshing = isRefreshing,
+            onRefresh = onRefresh,
+        ),
         topBar = {
             TopAppBar(
                 title = { Text("TopAppBar") },
@@ -81,9 +83,9 @@ fun RefreshIndicatorComposable() {
                     IconButton(onClick = onRefresh) {
                         Icon(Icons.Filled.Refresh, "Trigger Refresh")
                     }
-                }
+                },
             )
-        }
+        },
     ) {
         Box(Modifier.padding(it)) {
             LazyColumn(Modifier.fillMaxSize()) {
@@ -97,11 +99,10 @@ fun RefreshIndicatorComposable() {
                     .graphicsLayer {
                         scaleX = scaleFraction()
                         scaleY = scaleFraction()
-                    }
+                    },
             ) {
                 PullToRefreshDefaults.LoadingIndicator(state = state, isRefreshing = isRefreshing)
             }
         }
     }
-
 }

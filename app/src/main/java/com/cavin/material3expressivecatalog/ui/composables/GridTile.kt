@@ -34,10 +34,10 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun GridTile(
-    modifier: Modifier = Modifier,
     title: String,
     icon: ImageVector,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     Card(
         modifier = modifier
@@ -48,23 +48,23 @@ fun GridTile(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Box(
                 modifier = Modifier
                     .weight(1f),
-                contentAlignment = Alignment.Center
+                contentAlignment = Alignment.Center,
             ) {
                 Icon(
                     imageVector = icon,
                     contentDescription = title,
-                    modifier = Modifier.size(40.dp)
+                    modifier = Modifier.size(40.dp),
                 )
             }
             Text(
                 text = title,
                 style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier.align(Alignment.Start)
+                modifier = Modifier.align(Alignment.Start),
             )
         }
     }

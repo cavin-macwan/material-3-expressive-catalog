@@ -49,12 +49,11 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ButtonComposables() {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Buttons") }
-            )
-        }) { innerPadding ->
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Buttons") },
+        )
+    }) { innerPadding ->
 
         var checked by remember { mutableStateOf(false) }
 
@@ -65,21 +64,20 @@ fun ButtonComposables() {
                 .padding(horizontal = 32.dp),
             verticalArrangement = Arrangement.Center,
         ) {
-
             Text("Elevated Button")
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             ) {
                 ElevatedButton(
                     onClick = {},
-                    shapes = ButtonDefaults.shapes()
+                    shapes = ButtonDefaults.shapes(),
                 ) { Text("Elevated Button") }
 
                 ElevatedToggleButton(
                     checked = checked,
-                    onCheckedChange = { checked = it }
+                    onCheckedChange = { checked = it },
                 ) {
                     Text("Elevated Button")
                 }
@@ -91,19 +89,18 @@ fun ButtonComposables() {
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             ) {
-
                 FilledIconButton(
                     onClick = { /* doSomething() */ },
-                    shapes = IconButtonDefaults.shapes()
+                    shapes = IconButtonDefaults.shapes(),
                 ) {
                     Icon(Icons.Filled.Lock, contentDescription = "Localized description")
                 }
                 FilledIconToggleButton(
                     checked = checked,
                     onCheckedChange = { checked = it },
-                    shapes = IconButtonDefaults.toggleableShapes()
+                    shapes = IconButtonDefaults.toggleableShapes(),
                 ) {
                     if (checked) {
                         Icon(Icons.Filled.Lock, contentDescription = "Localized description")
@@ -119,7 +116,7 @@ fun ButtonComposables() {
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
             ) {
                 FilledTonalButton(onClick = {}, shapes = ButtonDefaults.shapes()) {
                     Text("Filled Tonal Button")
@@ -127,7 +124,7 @@ fun ButtonComposables() {
 
                 FilledTonalIconButton(
                     onClick = { /* doSomething() */ },
-                    shapes = IconButtonDefaults.shapes()
+                    shapes = IconButtonDefaults.shapes(),
                 ) {
                     Icon(Icons.Filled.Lock, contentDescription = "Localized description")
                 }
@@ -135,7 +132,7 @@ fun ButtonComposables() {
                 FilledTonalIconToggleButton(
                     checked = checked,
                     onCheckedChange = { checked = it },
-                    shapes = IconButtonDefaults.toggleableShapes()
+                    shapes = IconButtonDefaults.toggleableShapes(),
                 ) {
                     if (checked) {
                         Icon(Icons.Filled.Lock, contentDescription = "Localized description")
@@ -146,5 +143,4 @@ fun ButtonComposables() {
             }
         }
     }
-
 }

@@ -58,7 +58,7 @@ fun ConnectedButtonGroupComposable() {
         val modifiers = listOf(
             Modifier.weight(1f),
             Modifier.weight(1.5f),
-            Modifier.weight(1f)
+            Modifier.weight(1f),
         )
 
         options.forEachIndexed { index, label ->
@@ -67,15 +67,15 @@ fun ConnectedButtonGroupComposable() {
                 onCheckedChange = { selectedIndex = index },
                 modifier = modifiers[index].semantics { role = Role.RadioButton },
                 shapes =
-                    when (index) {
-                        0 -> ButtonGroupDefaults.connectedLeadingButtonShapes()
-                        options.lastIndex -> ButtonGroupDefaults.connectedTrailingButtonShapes()
-                        else -> ButtonGroupDefaults.connectedMiddleButtonShapes()
-                    }
+                when (index) {
+                    0 -> ButtonGroupDefaults.connectedLeadingButtonShapes()
+                    options.lastIndex -> ButtonGroupDefaults.connectedTrailingButtonShapes()
+                    else -> ButtonGroupDefaults.connectedMiddleButtonShapes()
+                },
             ) {
                 Icon(
                     if (selectedIndex == index) checkedIcons[index] else unCheckedIcons[index],
-                    contentDescription = "Localized description"
+                    contentDescription = "Localized description",
                 )
                 Spacer(Modifier.size(ToggleButtonDefaults.IconSpacing))
                 Text(label)

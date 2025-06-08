@@ -26,10 +26,7 @@ import androidx.compose.ui.platform.LocalContext
 
 @ExperimentalMaterial3ExpressiveApi
 @Composable
-fun Material3ExpressiveCatalogTheme(
-    content: @Composable () -> Unit
-) {
-
+fun Material3ExpressiveCatalogTheme(content: @Composable () -> Unit) {
     val isDarkTheme = isSystemInDarkTheme()
 
     val colorScheme =
@@ -48,6 +45,6 @@ fun Material3ExpressiveCatalogTheme(
     MaterialExpressiveTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        content = content
+        content = content,
     )
 }

@@ -19,13 +19,13 @@ import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
 sealed interface Routes {
-
     @Serializable
     data object HomeRoute : NavKey, Routes
-
 }
 
-sealed interface ButtonGroupRoutes : Routes, NavKey {
+sealed interface ButtonGroupRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object ListingRoute : NavKey, ButtonGroupRoutes
 
@@ -36,8 +36,9 @@ sealed interface ButtonGroupRoutes : Routes, NavKey {
     data object ConnectedButtonGroupRoute : NavKey, ButtonGroupRoutes
 }
 
-sealed interface ProgressIndicatorRoutes : Routes, NavKey {
-
+sealed interface ProgressIndicatorRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object ProgressIndicatorRoute : NavKey, ProgressIndicatorRoutes
 
@@ -48,23 +49,23 @@ sealed interface ProgressIndicatorRoutes : Routes, NavKey {
     data object ListingRoute : NavKey, ProgressIndicatorRoutes
 }
 
-
-sealed interface ButtonRoutes : Routes, NavKey {
-
+sealed interface ButtonRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object ButtonRoute : NavKey, ButtonRoutes
-
 }
 
-sealed interface FabMenuRoutes : Routes, NavKey {
-
+sealed interface FabMenuRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object FabMenuRoute : NavKey, FabMenuRoutes
-
 }
 
-sealed interface BottomApBarRoutes : Routes, NavKey {
-
+sealed interface BottomApBarRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object ListingRoute : NavKey, BottomApBarRoutes
 
@@ -79,11 +80,11 @@ sealed interface BottomApBarRoutes : Routes, NavKey {
 
     @Serializable
     data object Variant4Route : NavKey, BottomApBarRoutes
-
 }
 
-sealed interface FloatingToolBarRoutes : Routes, NavKey {
-
+sealed interface FloatingToolBarRoutes :
+    Routes,
+    NavKey {
     @Serializable
     data object ListingRoute : NavKey, FloatingToolBarRoutes
 
@@ -92,19 +93,4 @@ sealed interface FloatingToolBarRoutes : Routes, NavKey {
 
     @Serializable
     data object Variant2Route : NavKey, FloatingToolBarRoutes
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,7 +30,7 @@ fun ContentScreen(content: @Composable () -> Unit) {
             modifier = Modifier
                 .padding(it)
                 .fillMaxSize(),
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
         ) {
             content()
         }

@@ -52,7 +52,7 @@ fun FloatingToolBarVariant1() {
                 LazyColumn(
                     state = rememberLazyListState(),
                     contentPadding = innerPadding,
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     val list = (0..75).map { it.toString() }
                     items(count = list.size) {
@@ -61,7 +61,7 @@ fun FloatingToolBarVariant1() {
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 16.dp)
+                                .padding(horizontal = 16.dp),
                         )
                     }
                 }
@@ -81,77 +81,77 @@ fun FloatingToolBarVariant1() {
                                         } else {
                                             menuState.show()
                                         }
-                                    }
+                                    },
                                 ) {
                                     Icon(
                                         imageVector = Icons.Filled.MoreVert,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 }
-                            }
+                            },
                         ) {
                             clickableItem(
                                 onClick = { /* doSomething() */ },
                                 icon = {
                                     Icon(
                                         Icons.Filled.Download,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 },
-                                label = "Download"
+                                label = "Download",
                             )
                             clickableItem(
                                 onClick = { /* doSomething() */ },
                                 icon = {
                                     Icon(
                                         Icons.Filled.Favorite,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 },
-                                label = "Favorite"
+                                label = "Favorite",
                             )
                             clickableItem(
                                 onClick = { /* doSomething() */ },
                                 icon = {
                                     Icon(
                                         Icons.Filled.Add,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 },
-                                label = "Add"
+                                label = "Add",
                             )
                             clickableItem(
                                 onClick = { /* doSomething() */ },
                                 icon = {
                                     Icon(
                                         Icons.Filled.Person,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 },
-                                label = "Person"
+                                label = "Person",
                             )
                             clickableItem(
                                 onClick = { /* doSomething() */ },
                                 icon = {
                                     Icon(
                                         Icons.Filled.ArrowUpward,
-                                        contentDescription = "Localized description"
+                                        contentDescription = "Localized description",
                                     )
                                 },
-                                label = "ArrowUpward"
+                                label = "ArrowUpward",
                             )
                         }
                     },
                     content = {
                         FilledIconButton(
                             modifier = Modifier.width(64.dp),
-                            onClick = { /* doSomething() */ }
+                            onClick = { /* doSomething() */ },
                         ) {
                             Icon(Icons.Filled.Add, contentDescription = "Localized description")
                         }
-                    }
+                    },
                 )
             }
-        }
+        },
     )
 }
