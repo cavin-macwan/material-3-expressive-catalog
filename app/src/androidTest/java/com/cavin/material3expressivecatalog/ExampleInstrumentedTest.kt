@@ -1,4 +1,4 @@
-package com.cavin.material3expressivedemo
+package com.cavin.material3expressivecatalog
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry

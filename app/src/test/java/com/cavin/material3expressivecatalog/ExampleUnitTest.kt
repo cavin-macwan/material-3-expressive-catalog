@@ -1,4 +1,4 @@
-package com.cavin.material3expressivedemo
+package com.cavin.material3expressivecatalog
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

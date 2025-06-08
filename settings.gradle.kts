@@ -27,5 +27,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Material 3 Expressive Demo"
+rootProject.name = "Material 3 Expressive Catalog"
 include(":app")

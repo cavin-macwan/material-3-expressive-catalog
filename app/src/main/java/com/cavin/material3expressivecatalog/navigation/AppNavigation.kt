@@ -1,4 +1,4 @@
-package com.cavin.material3expressivedemo.navigation
+package com.cavin.material3expressivecatalog.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
@@ -9,9 +9,10 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
-import com.cavin.material3expressivedemo.components.AppBarRowExample
-import com.cavin.material3expressivedemo.details.DetailsScreen
-import com.cavin.material3expressivedemo.home.HomeScreen
+import com.cavin.material3expressivecatalog.components.AppBarRowExample
+import com.cavin.material3expressivecatalog.components.buttongroup.ButtonGroupExample
+import com.cavin.material3expressivecatalog.home.HomeScreen
+import com.cavin.material3expressivecatalog.ui.ContentScreen
 import kotlinx.serialization.Serializable
 
 sealed interface Routes {
@@ -20,7 +21,7 @@ sealed interface Routes {
     data object HomeRoute : NavKey, Routes
 
     @Serializable
-    data object DetailsRoute : NavKey, Routes
+    data object ButtonGroupRoute : NavKey, Routes
 
     @Serializable
     data object AppBarRowExampleRoute : NavKey, Routes
@@ -50,8 +51,8 @@ fun AppNavigation() {
                                 backStack.add(Routes.AppBarRowExampleRoute)
                             }
 
-                            Routes.DetailsRoute -> {
-                                backStack.add(Routes.DetailsRoute)
+                            Routes.ButtonGroupRoute -> {
+                                backStack.add(Routes.ButtonGroupRoute)
                             }
 
                             Routes.HomeRoute -> {}
@@ -59,11 +60,13 @@ fun AppNavigation() {
                     }
                 )
             }
-            entry<Routes.DetailsRoute> {
-                DetailsScreen()
-            }
             entry<Routes.AppBarRowExampleRoute> {
                 AppBarRowExample()
+            }
+            entry<Routes.ButtonGroupRoute> {
+                ContentScreen {
+                    ButtonGroupExample()
+                }
             }
         }
     )

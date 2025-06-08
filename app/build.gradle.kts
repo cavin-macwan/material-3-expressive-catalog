@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.cavin.material3expressivedemo"
+    namespace = "com.cavin.material3expressivecatalog"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.cavin.material3expressivedemo"
+        applicationId = "com.cavin.material3expressivecatalog"
         minSdk = 31
         targetSdk = 36
         versionCode = 1

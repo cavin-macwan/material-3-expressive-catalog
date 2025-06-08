@@ -1,4 +1,4 @@
-package com.cavin.material3expressivedemo.components
+package com.cavin.material3expressivecatalog.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth

@@ -1,4 +1,4 @@
-package com.cavin.material3expressivedemo.ui.theme
+package com.cavin.material3expressivecatalog.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
