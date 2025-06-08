@@ -1,10 +1,20 @@
-# Material 3 Expressive Catalog
+<h1 align="center">Material 3 Expressive Catalog</h1>
 
-![banner.png](banner.png)
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-31%2B-brightgreen.svg?style=flat"/></a>
+</p>
 
-A demonstration application showcasing various Material 3 components and expressive UI patterns
+<p align="center">  
+A demonstration application showcasing various Material 3 components using expressive UI patterns
 built with Jetpack Compose. This catalog serves as a reference for developers looking to implement
 modern and expressive user interfaces in their Android applications.
+</p>
+
+
+<p align="center">
+<img src="banner.png"/>
+</p>
 
 ## ✨ Features
 
@@ -34,6 +44,7 @@ modern and expressive user interfaces in their Android applications.
    Build the project and run it on an Android emulator or physical device.
 
 ## 🎨 Available Components & Examples
+
 This catalog currently showcases the following Material 3 components and expressive patterns:
 
 * **Buttons**: Various button types and styles.
