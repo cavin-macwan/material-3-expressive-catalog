@@ -34,6 +34,14 @@ sealed interface ProgressIndicatorRoutes : Routes, NavKey {
 }
 
 
+sealed interface ButtonRoutes : Routes, NavKey {
+
+    @Serializable
+    data object ButtonRoute : NavKey, ButtonRoutes
+
+}
+
+
 
 
 

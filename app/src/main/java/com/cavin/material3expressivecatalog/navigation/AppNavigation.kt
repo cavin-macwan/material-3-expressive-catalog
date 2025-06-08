@@ -10,6 +10,7 @@ import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
 import com.cavin.material3expressivecatalog.home.HomeScreen
 import com.cavin.material3expressivecatalog.components.buttongroup.groupButtonNavGraph
+import com.cavin.material3expressivecatalog.components.buttons.buttonNavGraph
 import com.cavin.material3expressivecatalog.components.progressindicators.progressIndicatorNavGraph
 
 
@@ -31,13 +32,16 @@ fun AppNavigation() {
             entry<Routes.HomeRoute> {
                 HomeScreen(
                     onNavigateToButtonGroup = { backStack.add(ButtonGroupRoutes.ButtonGroupListingRoute) },
-                    onNavigateToProgressIndicator = { backStack.add(ProgressIndicatorRoutes.ProgressIndicatorListingRoute) }
+                    onNavigateToProgressIndicator = { backStack.add(ProgressIndicatorRoutes.ProgressIndicatorListingRoute) },
+                    onNavigateToButtonRoute = { backStack.add(ButtonRoutes.ButtonRoute) }
                 )
             }
 
             groupButtonNavGraph(backStack)
 
             progressIndicatorNavGraph(backStack)
+
+            buttonNavGraph(backStack)
         }
     )
 }
