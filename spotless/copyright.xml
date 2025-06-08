@@ -14,9 +14,3 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<full-backup-content>
-    <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
-</full-backup-content>
