@@ -25,12 +25,24 @@ modern and expressive user interfaces in their Android applications.
   see them in action.
 * **Modular Code**: Organized by component for easy understanding and reusability.
 
-## 🛠️ Built With
+## 🛠️ Tech Stack & Key Libraries
 
-* [Kotlin](https://kotlinlang.org/)
-* [Jetpack Compose](https://developer.android.com/jetpack/compose)
-* [Material 3 Components](https://m3.material.io/)
-* [Android Studio](https://developer.android.com/studio)
+This project is built using a modern Android development stack, leveraging the power of Kotlin and Jetpack Compose:
+
+*   **UI Toolkit**:
+    *   [Jetpack Compose](https://developer.android.com/jetpack/compose): Android's modern declarative UI toolkit.
+    *   [Material 3 Expressive Components](https://m3.material.io/blog/building-with-m3-expressive): Implementing the latest Material Design guidelines using expressive components.
+    *   [Material Icons Extended](https://developer.android.com/reference/kotlin/androidx/compose/material/icons/Icons.Filled): Providing a rich set of icons.
+*   **Architecture & Navigation**:
+    *   [Android Jetpack Libraries](https://developer.android.com/jetpack): Suite of libraries to help follow best practices (e.g., ViewModel, Lifecycle).
+    *   [Hilt for Dependency Injection](https://dagger.dev/hilt/): For managing dependencies in a robust and scalable way.
+    *   [Jetpack Navigation 3](https://developer.android.com/guide/navigation/navigation-3): For navigating between composable screens.
+*   **Data Handling**:
+    *   [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization): For serializing and deserializing Kotlin objects to/from JSON.
+*   **Build & Development Tools**:
+    *   [Android Studio](https://developer.android.com/studio): The official IDE for Android development.
+    *   [Gradle](https://gradle.org/): For build automation.
+    *   [Spotless](https://github.com/diffplug/spotless): For code formatting, configured with [KtLint](https://ktlint.github.io/) (including `io.nlopez.compose.rules:ktlint` for Compose-specific rules).
 
 ## 🚀 Getting Started
 
