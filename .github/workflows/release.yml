@@ -1,0 +1,59 @@
+name: Build & Release on Merge to Main
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-release:
+        name: Build APK and Create Release
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write  # allows release/tag creation
+
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v4
+
+            -   name: Set up JDK 17
+                uses: actions/setup-java@v3
+                with:
+                    distribution: temurin
+                    java-version: 17
+
+            -   name: Make Gradle wrapper executable
+                run: chmod +x ./gradlew
+
+            -   name: Build APK
+                run: ./gradlew assembleRelease
+
+            -   name: Get version name from Gradle
+                id: version
+                run: |
+                    VERSION_NAME=$(./gradlew -q printVersionName | tail -n 1)
+                    echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_ENV
+                    echo "version_name=$VERSION_NAME" >> $GITHUB_OUTPUT
+
+            -   name: Create Git Tag
+                run: |
+                    git config user.name "github-actions[bot]"
+                    git config user.email "github-actions[bot]@users.noreply.github.com"
+                    git tag -a "v${{ steps.version.outputs.version_name }}" -m "Release v${{ steps.version.outputs.version_name }}"
+                    git push origin "v${{ steps.version.outputs.version_name }}"
+
+            -   name: Generate changelog
+                id: changelog
+                uses: heinrichreimer/action-github-changelog-generator@v2.3
+                with:
+                    token: ${{ secrets.TOKEN }}
+                    tag: "v${{ steps.version.outputs.version_name }}"
+
+            -   name: Create GitHub Release
+                uses: softprops/action-gh-release@v2
+                with:
+                    tag_name: "v${{ steps.version.outputs.version_name }}"
+                    name: "v${{ steps.version.outputs.version_name }}"
+                    body: ${{ steps.changelog.outputs.changelog }}
+                    files: app/build/outputs/apk/release/app-release.apk
