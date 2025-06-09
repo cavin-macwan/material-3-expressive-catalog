@@ -94,3 +94,16 @@ sealed interface FloatingToolBarRoutes :
     @Serializable
     data object Variant2Route : NavKey, FloatingToolBarRoutes
 }
+
+sealed interface LargeFabRoutes :
+    Routes,
+    NavKey {
+    @Serializable
+    data object ListingRoute : NavKey, LargeFabRoutes
+
+    @Serializable
+    data object Variant1Route : NavKey, LargeFabRoutes
+
+    @Serializable
+    data object Variant2Route : NavKey, LargeFabRoutes
+}

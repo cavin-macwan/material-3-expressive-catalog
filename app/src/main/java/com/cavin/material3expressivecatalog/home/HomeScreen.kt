@@ -22,11 +22,12 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
-import androidx.compose.material.icons.automirrored.filled.Subject
-import androidx.compose.material.icons.filled.Dock
-import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.AddCircleOutline
+import androidx.compose.material.icons.filled.CallToAction
+import androidx.compose.material.icons.filled.Handyman
+import androidx.compose.material.icons.filled.Loop
+import androidx.compose.material.icons.filled.Segment
 import androidx.compose.material.icons.filled.TouchApp
-import androidx.compose.material.icons.filled.ViewWeek
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -43,16 +44,17 @@ fun HomeScreen(
     onNavigateToBottomAppBarRoute: () -> Unit,
     onNavigateToFabMenuRoute: () -> Unit,
     onNavigateToFloatingToolBarRoute: () -> Unit,
+    onNavigateToLargeFabRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
             title = "Button Group Example",
-            icon = Icons.Filled.ViewWeek,
+            icon = Icons.Filled.Segment,
             onClickAction = onNavigateToButtonGroup,
         ),
         HomeItemData(
             title = "Progress Indicator Example",
-            icon = Icons.Filled.Refresh,
+            icon = Icons.Filled.Loop,
             onClickAction = onNavigateToProgressIndicator,
         ),
         HomeItemData(
@@ -62,7 +64,7 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Bottom App Bar Example",
-            icon = Icons.Filled.Dock,
+            icon = Icons.Filled.CallToAction,
             onClickAction = onNavigateToBottomAppBarRoute,
         ),
         HomeItemData(
@@ -72,18 +74,19 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Floating ToolBar Example",
-            icon = Icons.AutoMirrored.Filled.Subject,
+            icon = Icons.Filled.Handyman,
             onClickAction = onNavigateToFloatingToolBarRoute,
+        ),
+        HomeItemData(
+            title = "Large Floating Action Button Example",
+            icon = Icons.Filled.AddCircleOutline,
+            onClickAction = onNavigateToLargeFabRoute,
         ),
     )
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    Text("Material 3 Expressive Demo")
-                },
-            )
+            TopAppBar(title = { Text("Material 3 Expressive Demo") })
         },
     ) { paddingValues ->
         LazyVerticalGrid(
