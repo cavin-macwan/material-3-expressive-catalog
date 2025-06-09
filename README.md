@@ -107,18 +107,12 @@ Explore the app to see these components in action!
 
 ## 🖼️ Screenshots
 
-## 🎥 Videos
-
-<table>
-  <tr>
-    <td><video src="assets/button-group.mp4" width="320" controls muted playsinline></video></td>
-    <td><video src="assets/buttons.mp4" width="320" controls muted playsinline></video></td>
-  </tr>
-  <tr>
-    <td><video src="assets/floating%20toolbar.mp4" width="320" controls muted playsinline></video></td>
-    <td><video src="assets/progress%20indicator.mp4" width="320" controls muted playsinline></video></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/button-group.gif" width="45%" />
+  <img src="assets/progress-indicator.gif" width="45%" /><br/>
+  <img src="assets/buttons.gif" width="45%" />
+  <img src="assets/floating-toolbar.gif" width="45%" />
+</p>
 
 ## 🌟 Find this repository useful? :heart:
 
