@@ -71,6 +71,16 @@ Jetpack Compose:
       with [KtLint](https://ktlint.github.io/) (including `io.nlopez.compose.rules:ktlint` for
       Compose-specific rules).
 
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="assets/button-group.gif" width="45%" />
+  <img src="assets/progress-indicator.gif" width="45%" /><br/>
+  <img src="assets/buttons.gif" width="45%" />
+  <img src="assets/floating-toolbar.gif" width="45%" />
+</p>
+
+
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
@@ -104,15 +114,6 @@ Explore the app to see these components in action!
   code for easier exploration.
 - [ ] Overall polish: Conduct a thorough review and refinement of the entire application for
   improved user experience, performance, and code quality.
-
-## 🖼️ Screenshots
-
-<p align="center">
-  <img src="assets/button-group.gif" width="45%" />
-  <img src="assets/progress-indicator.gif" width="45%" /><br/>
-  <img src="assets/buttons.gif" width="45%" />
-  <img src="assets/floating-toolbar.gif" width="45%" />
-</p>
 
 ## 🌟 Find this repository useful? :heart:
 
