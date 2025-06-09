@@ -96,22 +96,16 @@ This catalog currently showcases the following Material 3 components and express
 
 Explore the app to see these components in action!
 
+## 🗺️ Roadmap
+
+- [ ] Expand component coverage: Integrate all Material 3 expressive components with comprehensive
+  descriptions and usage guidelines (WIP)
+- [ ] Code navigation: Implement direct links from component examples to their corresponding source
+  code for easier exploration.
+- [ ] Overall polish: Conduct a thorough review and refinement of the entire application for
+  improved user experience, performance, and code quality.
+
 ## 🖼️ Screenshots
-
-
-
-## 🤝 Contributing
-
-Contributions are welcome! If you'd like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature-name`).
-6. Open a Pull Request.
-
-Please ensure your code follows the project's coding style and includes relevant documentation.
 
 ## 🌟 Find this repository useful? :heart:
 
