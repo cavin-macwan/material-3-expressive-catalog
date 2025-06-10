@@ -30,6 +30,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.CircularWavyProgressIndicator
 import androidx.compose.material3.ContainedLoadingIndicator
+import androidx.compose.material3.LinearWavyProgressIndicator
+import androidx.compose.material3.LoadingIndicator
 import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
@@ -47,6 +49,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
+
 @Composable
 fun ProgressIndicatorComposables() {
     Scaffold(topBar = {
@@ -56,21 +59,21 @@ fun ProgressIndicatorComposables() {
     }) {
         var progress by remember { mutableFloatStateOf(0.1f) }
         val animatedProgress by
-            animateFloatAsState(
-                targetValue = progress,
-                animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec,
-            )
+        animateFloatAsState(
+            targetValue = progress,
+            animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec,
+        )
 
         val containedAnimatedProgress by
-            animateFloatAsState(
-                targetValue = progress,
-                animationSpec =
+        animateFloatAsState(
+            targetValue = progress,
+            animationSpec =
                 spring(
                     dampingRatio = Spring.DampingRatioNoBouncy,
                     stiffness = Spring.StiffnessVeryLow,
                     visibilityThreshold = 1 / 1000f,
                 ),
-            )
+        )
 
         val thickStrokeWidth = with(LocalDensity.current) { 8.dp.toPx() }
         val thickStroke = remember(thickStrokeWidth) {
@@ -103,7 +106,13 @@ fun ProgressIndicatorComposables() {
                 ContainedLoadingIndicator()
 
                 ContainedLoadingIndicator(progress = { containedAnimatedProgress })
+
+                LoadingIndicator()
+
             }
+            Spacer(Modifier.requiredHeight(30.dp))
+
+            LinearWavyProgressIndicator()
 
             Spacer(Modifier.requiredHeight(30.dp))
 
