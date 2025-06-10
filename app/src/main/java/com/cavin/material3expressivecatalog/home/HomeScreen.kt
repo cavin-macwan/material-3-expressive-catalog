@@ -22,11 +22,11 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
+import androidx.compose.material.icons.automirrored.filled.Segment
 import androidx.compose.material.icons.filled.AddCircleOutline
 import androidx.compose.material.icons.filled.CallToAction
 import androidx.compose.material.icons.filled.Handyman
 import androidx.compose.material.icons.filled.Loop
-import androidx.compose.material.icons.filled.Segment
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -50,7 +50,7 @@ fun HomeScreen(
     val homeItems = listOf(
         HomeItemData(
             title = "Button Group Example",
-            icon = Icons.Filled.Segment,
+            icon = Icons.AutoMirrored.Filled.Segment,
             onClickAction = onNavigateToButtonGroup,
         ),
         HomeItemData(
