@@ -107,3 +107,16 @@ sealed interface LargeFabRoutes :
     @Serializable
     data object Variant2Route : NavKey, LargeFabRoutes
 }
+
+sealed interface NavigationRailRoutes :
+    Routes,
+    NavKey {
+    @Serializable
+    data object ListingRoute : NavKey, NavigationRailRoutes
+
+    @Serializable
+    data object Variant1Route : NavKey, NavigationRailRoutes
+
+    @Serializable
+    data object Variant2Route : NavKey, NavigationRailRoutes
+}

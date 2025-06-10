@@ -29,6 +29,7 @@ import com.cavin.material3expressivecatalog.components.buttons.buttonNavGraph
 import com.cavin.material3expressivecatalog.components.fab.fabMenuNavGraph
 import com.cavin.material3expressivecatalog.components.floatingtoolbar.floatingToolBarNavGraph
 import com.cavin.material3expressivecatalog.components.largefab.largeFabNavGraph
+import com.cavin.material3expressivecatalog.components.navigationrail.navigationRailNavGraph
 import com.cavin.material3expressivecatalog.components.progressindicators.progressIndicatorNavGraph
 import com.cavin.material3expressivecatalog.home.HomeScreen
 
@@ -74,6 +75,11 @@ fun AppNavigation() {
                             LargeFabRoutes.ListingRoute,
                         )
                     },
+                    onNavigateToNavigationRailRoute = {
+                        backStack.add(
+                            NavigationRailRoutes.ListingRoute,
+                        )
+                    },
                 )
             }
 
@@ -90,6 +96,8 @@ fun AppNavigation() {
             floatingToolBarNavGraph(backStack)
 
             largeFabNavGraph(backStack)
+
+            navigationRailNavGraph(backStack)
         },
     )
 }

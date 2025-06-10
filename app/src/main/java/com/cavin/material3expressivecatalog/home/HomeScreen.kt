@@ -45,6 +45,7 @@ fun HomeScreen(
     onNavigateToFabMenuRoute: () -> Unit,
     onNavigateToFloatingToolBarRoute: () -> Unit,
     onNavigateToLargeFabRoute: () -> Unit,
+    onNavigateToNavigationRailRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -81,6 +82,11 @@ fun HomeScreen(
             title = "Large Floating Action Button Example",
             icon = Icons.Filled.AddCircleOutline,
             onClickAction = onNavigateToLargeFabRoute,
+        ),
+        HomeItemData(
+            title = "Navigation Rail Example",
+            icon = Icons.Filled.TouchApp,
+            onClickAction = onNavigateToNavigationRailRoute,
         ),
     )
 
