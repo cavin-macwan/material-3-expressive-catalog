@@ -120,3 +120,19 @@ sealed interface NavigationRailRoutes :
     @Serializable
     data object Variant2Route : NavKey, NavigationRailRoutes
 }
+
+sealed interface SplitButtonRoutes :
+    Routes,
+    NavKey {
+    @Serializable
+    data object ListingRoute : NavKey, SplitButtonRoutes
+
+    @Serializable
+    data object Variant1Route : NavKey, SplitButtonRoutes
+
+    @Serializable
+    data object Variant2Route : NavKey, SplitButtonRoutes
+
+    @Serializable
+    data object Variant3Route : NavKey, SplitButtonRoutes
+}

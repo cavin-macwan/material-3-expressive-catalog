@@ -27,6 +27,8 @@ import androidx.compose.material.icons.filled.AddCircleOutline
 import androidx.compose.material.icons.filled.CallToAction
 import androidx.compose.material.icons.filled.Handyman
 import androidx.compose.material.icons.filled.Loop
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -46,6 +48,7 @@ fun HomeScreen(
     onNavigateToFloatingToolBarRoute: () -> Unit,
     onNavigateToLargeFabRoute: () -> Unit,
     onNavigateToNavigationRailRoute: () -> Unit,
+    onNavigateToSplitButtonRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -85,8 +88,13 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Navigation Rail Example",
-            icon = Icons.Filled.TouchApp,
+            icon = Icons.Filled.Navigation,
             onClickAction = onNavigateToNavigationRailRoute,
+        ),
+        HomeItemData(
+            title = "Split Button Example",
+            icon = Icons.Filled.MoreVert,
+            onClickAction = onNavigateToSplitButtonRoute,
         ),
     )
 
