@@ -23,13 +23,14 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
 import androidx.compose.material.icons.automirrored.filled.Segment
+import androidx.compose.material.icons.automirrored.filled.Subject // Added
 import androidx.compose.material.icons.filled.AddCircleOutline
 import androidx.compose.material.icons.filled.CallToAction
-import androidx.compose.material.icons.filled.Handyman
 import androidx.compose.material.icons.filled.Loop
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.TouchApp
+import androidx.compose.material.icons.filled.Tune // Added
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -49,6 +50,7 @@ fun HomeScreen(
     onNavigateToLargeFabRoute: () -> Unit,
     onNavigateToNavigationRailRoute: () -> Unit,
     onNavigateToSplitButtonRoute: () -> Unit,
+    onNavigateToVerticalFloatingToolbarRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -78,7 +80,7 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Floating ToolBar Example",
-            icon = Icons.Filled.Handyman,
+            icon = Icons.AutoMirrored.Filled.Subject,
             onClickAction = onNavigateToFloatingToolBarRoute,
         ),
         HomeItemData(
@@ -95,6 +97,11 @@ fun HomeScreen(
             title = "Split Button Example",
             icon = Icons.Filled.MoreVert,
             onClickAction = onNavigateToSplitButtonRoute,
+        ),
+        HomeItemData(
+            title = "Vertical Floating ToolBar",
+            icon = Icons.Filled.Tune,
+            onClickAction = onNavigateToVerticalFloatingToolbarRoute,
         ),
     )
 
