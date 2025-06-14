@@ -23,14 +23,14 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuOpen
 import androidx.compose.material.icons.automirrored.filled.Segment
-import androidx.compose.material.icons.automirrored.filled.Subject // Added
+import androidx.compose.material.icons.automirrored.filled.Subject
 import androidx.compose.material.icons.filled.AddCircleOutline
 import androidx.compose.material.icons.filled.CallToAction
 import androidx.compose.material.icons.filled.Loop
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.TouchApp
-import androidx.compose.material.icons.filled.Tune // Added
+import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
