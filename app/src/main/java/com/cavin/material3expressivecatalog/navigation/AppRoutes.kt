@@ -136,3 +136,11 @@ sealed interface SplitButtonRoutes :
     @Serializable
     data object Variant3Route : NavKey, SplitButtonRoutes
 }
+
+sealed interface VerticalFloatingToolBarRoutes :
+    Routes,
+    NavKey {
+
+    @Serializable
+    data object ToolbarRoute : NavKey, VerticalFloatingToolBarRoutes
+}

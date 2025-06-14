@@ -32,6 +32,7 @@ import com.cavin.material3expressivecatalog.components.largefab.largeFabNavGraph
 import com.cavin.material3expressivecatalog.components.navigationrail.navigationRailNavGraph
 import com.cavin.material3expressivecatalog.components.progressindicators.progressIndicatorNavGraph
 import com.cavin.material3expressivecatalog.components.splitbutton.splitButtonNavGraph
+import com.cavin.material3expressivecatalog.components.verticalfloatingtoolbar.verticalFloatingToolBarNavGraph
 import com.cavin.material3expressivecatalog.home.HomeScreen
 
 @Composable
@@ -86,6 +87,11 @@ fun AppNavigation() {
                             SplitButtonRoutes.ListingRoute,
                         )
                     },
+                    onNavigateToVerticalFloatingToolbarRoute = {
+                        backStack.add(
+                            VerticalFloatingToolBarRoutes.ToolbarRoute,
+                        )
+                    },
                 )
             }
 
@@ -106,6 +112,8 @@ fun AppNavigation() {
             navigationRailNavGraph(backStack)
 
             splitButtonNavGraph(backStack)
+
+            verticalFloatingToolBarNavGraph()
         },
     )
 }
