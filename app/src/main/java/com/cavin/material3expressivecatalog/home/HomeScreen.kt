@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Navigation
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material.icons.filled.Tune
+import androidx.compose.material.icons.filled.ViewWeek
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -106,7 +107,7 @@ fun HomeScreen(
         ),
         HomeItemData(
             title = "Wide Navigation Rail",
-            icon = Icons.AutoMirrored.Filled.MenuOpen,
+            icon = Icons.Filled.ViewWeek,
             onClickAction = onNavigateToWideNavigationRailRoute,
         ),
     )
