@@ -144,3 +144,11 @@ sealed interface VerticalFloatingToolBarRoutes :
     @Serializable
     data object ToolbarRoute : NavKey, VerticalFloatingToolBarRoutes
 }
+
+sealed interface WideNavigationRailRoutes :
+    Routes,
+    NavKey {
+
+    @Serializable
+    data object ToolbarRoute : NavKey, WideNavigationRailRoutes
+}

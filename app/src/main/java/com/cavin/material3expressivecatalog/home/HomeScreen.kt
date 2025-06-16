@@ -51,6 +51,7 @@ fun HomeScreen(
     onNavigateToNavigationRailRoute: () -> Unit,
     onNavigateToSplitButtonRoute: () -> Unit,
     onNavigateToVerticalFloatingToolbarRoute: () -> Unit,
+    onNavigateToWideNavigationRailRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -102,6 +103,11 @@ fun HomeScreen(
             title = "Vertical Floating ToolBar",
             icon = Icons.Filled.Tune,
             onClickAction = onNavigateToVerticalFloatingToolbarRoute,
+        ),
+        HomeItemData(
+            title = "Wide Navigation Rail",
+            icon = Icons.AutoMirrored.Filled.MenuOpen,
+            onClickAction = onNavigateToWideNavigationRailRoute,
         ),
     )
 
