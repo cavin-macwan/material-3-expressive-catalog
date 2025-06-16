@@ -108,8 +108,8 @@ Explore the app to see these components in action!
 
 ## 🗺️ Roadmap
 
-- [ ] Expand component coverage: Integrate all Material 3 expressive components with comprehensive
-  descriptions and usage guidelines (WIP)
+- [X] Expand component coverage: Integrate all Material 3 expressive components with comprehensive
+  descriptions and usage guidelines
 - [ ] Code navigation: Implement direct links from component examples to their corresponding source
   code for easier exploration.
 - [ ] Overall polish: Conduct a thorough review and refinement of the entire application for
