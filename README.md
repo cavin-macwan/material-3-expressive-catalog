@@ -87,7 +87,7 @@ Jetpack Compose:
    ```bash
    git clone https://github.com/cavin-macwan/material-3-expressive-catalog.git
    ```
-2. **Open in Android Studio:**
+2. **Open in Android Studio**
    Open the cloned project in Android Studio.
 3. **Build and Run:**
    Build the project and run it on an Android emulator or physical device.
